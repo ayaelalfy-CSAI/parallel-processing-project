@@ -5,9 +5,9 @@ import java.util.concurrent.*;
 public class ParallelPathfindingEngine {
 
     private final ExecutorService executor;
-    private final PathFinder pathFinder;
+    private final PathFinderInterface pathFinder;
 
-    public ParallelPathfindingEngine(int threadCount, PathFinder pathFinder) {
+    public ParallelPathfindingEngine(int threadCount, PathFinderInterface pathFinder) {
         this.executor = Executors.newFixedThreadPool(threadCount);
         this.pathFinder = pathFinder;
     }

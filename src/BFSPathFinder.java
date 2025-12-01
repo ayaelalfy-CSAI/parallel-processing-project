@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class BFSPathFinder implements PathFinder {
+public class BFSPathFinder implements PathFinderInterface {
 
     @Override
     public Path findPath(PathRequest request) {

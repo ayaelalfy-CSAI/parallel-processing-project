@@ -46,7 +46,7 @@ public class PathfindingExperiment {
     //  Sequential & Parallel
     public void runExperiment() {
 
-        PathFinder bfs = new BFSPathFinder();
+        PathFinderInterface bfs = new BFSPathFinder();
 
         List<PathRequest> requests = generateRequests();
 
@@ -82,7 +82,7 @@ public class PathfindingExperiment {
     }
 
     // Sequential BFS
-    private List<Path> runSequential(PathFinder pathFinder, List<PathRequest> requests) {
+    private List<Path> runSequential(PathFinderInterface pathFinder, List<PathRequest> requests) {
         List<Path> results = new ArrayList<>();
         for (PathRequest req : requests) {
             results.add(pathFinder.findPath(req));
